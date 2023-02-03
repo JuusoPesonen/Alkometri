@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import Options from './components/Options';
 
 function App() {
   const [weight, setWeight] = useState(0);
@@ -47,30 +48,14 @@ function App() {
       <label>
         Bottles:
         <select value={numBeers} onChange={(e)=> setNumBeers(e.target.value)}>
-          <option value=""></option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
+          <Options min={0} max={15}/>
         </select>
       </label>
       <br/>
       <label>
         Time since last beer(hours):
         <select value={time} onChange={(e)=> setTime(e.target.value)}>
-          <option value=""></option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
+          <Options min={1} max={20}/>
         </select>
       </label>
       <br/>
