@@ -55,7 +55,7 @@ function App() {
       <label>
         Time since last beer(hours):
         <select value={time} onChange={(e)=> setTime(e.target.value)}>
-          <Options min={1} max={20}/>
+          <Options min={0} max={20}/>
         </select>
       </label>
       <br/>
